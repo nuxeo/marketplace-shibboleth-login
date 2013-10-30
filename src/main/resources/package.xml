@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package type="addon" name="shibboleth-authentication" version="@VERSION@">
+  <title>Shibboleth Authentication</title>
+  <description>Enable Shibboleth authentication in Nuxeo</description>
+  <vendor>Nuxeo</vendor>
+  <classifier>Open Source</classifier>
+  <home-page>http://doc.nuxeo.com/display/NXDOC/Shibboleth+Authentication</home-page>
+  <platforms>
+    <platform>dm-5.4.0</platform>
+    <platform>dm-5.4.0.1</platform>
+    <platform>cap-5.6.0</platform>
+    <platform>cap-5.5.0</platform>
+    <platform>cap-@DISTRIB_VERSION@</platform>
+  </platforms>
+  <nuxeo-validation>nuxeo_certified</nuxeo-validation>
+  <license>LGPL</license>
+  <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
+  <supported>true</supported>
+  <production-state>production_ready</production-state>
+  <dependencies>
+    <package>nuxeo-dm:5.4.0:@DISTRIB_VERSION@</package>
+  </dependencies>
+  <license>LGPL 2.1</license>
+  <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
+</package>
