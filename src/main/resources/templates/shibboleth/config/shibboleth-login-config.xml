@@ -5,7 +5,6 @@
   <!--
   Disabled by default to lets administrator set their own AuthentificationChain
   To edit it, go to templates/shibboleth/config/shibboleth-login-config.xml
-  --
 
   <require>org.nuxeo.ecm.platform.ui.web.auth.WebEngineConfig</require>
 
