@@ -1,4 +1,4 @@
-<project name="nuxeo-assembly"
+<project name="shibboleth-assembly"
          default="build"
          xmlns:nx="urn:nuxeo-build"
          xmlns:artifact="urn:nuxeo-artifact">
@@ -6,7 +6,8 @@
   <taskdef resource="org/nuxeo/build/artifact/antlib.xml"
            uri="urn:nuxeo-artifact" />
 
-  <target name="build" description="Build Nuxeo Shibboleth Authentification Marketplace package">
+  <target name="build"
+          description="Build Nuxeo Shibboleth Authentification Marketplace package">
     <tstamp />
     <delete failonerror="false"
             dir="${maven.project.build.directory}/marketplace" />
@@ -26,7 +27,6 @@
     <zip destfile="${maven.project.build.directory}/${maven.project.artifactId}-${maven.project.version}.zip"
          basedir="${maven.project.build.directory}/marketplace" />
     <artifact:attach file="${maven.project.build.directory}/${maven.project.artifactId}-${maven.project.version}.zip"
-                     target="${maven.project.groupId}:${maven.project.artifactId}"
                      type="zip" />
   </target>
 
