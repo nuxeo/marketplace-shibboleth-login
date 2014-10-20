@@ -4,7 +4,8 @@
   <description>Enable Shibboleth authentication in Nuxeo</description>
   <vendor>Nuxeo</vendor>
   <classifier>Open Source</classifier>
-  <home-page>http://doc.nuxeo.com/display/NXDOC/Shibboleth+Authentication</home-page>
+  <home-page>http://doc.nuxeo.com/display/NXDOC/Shibboleth+Authentication
+  </home-page>
   <platforms>
     <platform>dm-5.4.0</platform>
     <platform>dm-5.4.0.1</platform>
@@ -17,9 +18,6 @@
   <license-url>http://www.gnu.org/licenses/lgpl.html</license-url>
   <supported>true</supported>
   <production-state>production_ready</production-state>
-  <dependencies>
-    <package>nuxeo-dm:5.4.0:@DISTRIB_VERSION@</package>
-  </dependencies>
   <license>LGPL 2.1</license>
   <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
   <visibility>MARKETPLACE</visibility>
