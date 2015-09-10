@@ -18,6 +18,10 @@
       <artifact:file key="org.nuxeo.ecm.platform:nuxeo-platform-login-shibboleth" />
     </copy>
 
+    <copy todir="${maven.project.build.directory}/marketplace/install/bundles">
+      <artifact:resolveFile key="org.nuxeo.ecm.platform:nuxeo-usermapper::jar" />
+    </copy>
+
     <zip destfile="${maven.project.build.directory}/${maven.project.artifactId}-${maven.project.version}.zip"
          basedir="${maven.project.build.directory}/marketplace" />
     <artifact:attach file="${maven.project.build.directory}/${maven.project.artifactId}-${maven.project.version}.zip"
