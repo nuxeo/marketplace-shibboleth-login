@@ -20,5 +20,5 @@
   <production-state>production_ready</production-state>
   <license>LGPL 2.1</license>
   <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
-  <visibility>MARKETPLACE</visibility>
+  <visibility>PUBLIC</visibility>
 </package>
