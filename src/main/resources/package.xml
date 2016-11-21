@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package type="addon" name="shibboleth-authentication" version="@VERSION@">
   <title>Shibboleth Authentication</title>
-  <description>Enable Shibboleth authentication in Nuxeo</description>
+  <description>The Shibboleth Authentication addon allows to let your users authenticate against Shibboleth compliant identity management federation systems, providing a Single Sign On experience with other applications also plugged to the same system.</description>
   <vendor>Nuxeo</vendor>
   <classifier>Open Source</classifier>
   <home-page>http://doc.nuxeo.com/display/NXDOC/Shibboleth+Authentication
