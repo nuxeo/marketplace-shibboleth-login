@@ -5,19 +5,35 @@
   <taskdef resource="net/sf/antcontrib/antlib.xml"/>
 
   <property name="out.dir" value="${maven.project.build.directory}"/>
-  <property name="nuxeoctl.option.clid}" value=""/>
+  <condition property="idp.credentials.dir" value="${env.IDP_CREDENTIALS_DIR}" else="/opt/shibboleth-idp/credentials">
+    <isset property="env.IDP_CREDENTIALS_DIR" />
+  </condition>
+  <condition property="sp.credentials.dir" value="${env.SP_CREDENTIALS_DIR}" else="/etc/ssl/certs">
+    <isset property="env.SP_CREDENTIALS_DIR" />
+  </condition>
+
   <unzip dest="${out.dir}/" overwrite="false">
     <artifact:resolveFile key="org.nuxeo:nuxeo-ftest::zip"/>
   </unzip>
   <import file="${out.dir}/nuxeo-ftest.xml"/>
 
-  <property name="mp.install" value="file:${out.dir}/nuxeo-marketplace-jsf-ui-${nuxeo.distribution.version}.zip,
-    file:${out.dir}/marketplace-shibboleth-authentication-${maven.project.version}.zip"/>
-  <target name="prepare-environment" depends="_init,prepare-db,prepare-tomcat">
-    <copy todir="${out.dir}">
-      <artifact:file key="org.nuxeo.ecm.distribution:nuxeo-marketplace-jsf-ui::zip"/>
-      <artifact:file key="org.nuxeo.ecm.platform:marketplace-shibboleth-authentication::zip"/>
-    </copy>
+  <target name="prepare-ssl-environment">
+    <exec executable="keytool" failonerror="false">
+      <arg line="-import" />
+      <arg line="-file ${idp.credentials.dir}/idp.crt" />
+      <arg line="-alias idpcert" />
+      <arg line="-keystore ${out.dir}/shibtruststore" />
+      <arg line="-storepass password" />
+      <arg line="-noprompt" />
+    </exec>
+    <exec executable="keytool" failonerror="false">
+      <arg line="-import" />
+      <arg line="-file ${sp.credentials.dir}/sp.shibboleth.com.crt" />
+      <arg line="-alias spcert" />
+      <arg line="-keystore ${out.dir}/shibtruststore" />
+      <arg line="-storepass password" />
+      <arg line="-noprompt" />
+    </exec>
   </target>
 
 </project>
