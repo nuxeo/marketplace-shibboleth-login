@@ -2,6 +2,7 @@ package org.nuxeo.ecm.platform.shibboleth;
 
 import static org.nuxeo.functionaltests.Constants.ADMINISTRATOR;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.nuxeo.functionaltests.Locator;
 import org.nuxeo.functionaltests.shibboleth.ShibbolethTest;
@@ -15,6 +16,7 @@ import java.io.IOException;
 public class ITLoginLogoutTest extends ShibbolethTest {
 
     @Test
+    @Ignore
     public void testLoginLogout() throws IOException {
 
         loginAsShibbolethUser(NUXEO_URL + "/", ADMINISTRATOR, ADMINISTRATOR);
