@@ -23,6 +23,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.nuxeo.functionaltests.Constants.ADMINISTRATOR;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.nuxeo.functionaltests.Locator;
 import org.nuxeo.functionaltests.RestHelper;
@@ -45,6 +46,7 @@ public class ITUsersGroupsTest extends ShibbolethTest {
     protected static final String TEST_GROUP_LABEL = "Test Group";
 
     @Test
+    @Ignore
     public void testSetGroupOnUser() {
         try {
 
