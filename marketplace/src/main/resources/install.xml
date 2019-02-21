@@ -1,5 +1,6 @@
+<!-- See documentation at http://doc.nuxeo.com/x/IgIz -->
 <install>
-  <update file="${package.root}/install/bundles" todir="${env.bundles}" />
-  <copy dir="${package.root}/templates" todir="${env.templates}" overwrite="true" />
-  <config addtemplate="shibboleth" />
+  @BUNDLES@
+  @LIBS@
+  @PROPERTIES@
 </install>
