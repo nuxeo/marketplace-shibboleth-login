@@ -67,7 +67,9 @@
                 file2="${outdir}/nuxeo-nxr-server-${nuxeo.distribution.version}.zip"
                 includesfile="${outdir}/includes"
                 excludesfile="${outdir}/excludesfile"
-                patternsetid="shibboleth.versus.server">
+                patternsetid="shibboleth.versus.server"
+                ignoreContent="false"
+                ignoreContentPattern=".*\.jar$">
     </nx:zipdiff>
     <unzip src="${outdir}/nxr-${maven.project.version}.zip" dest="${outdir}/marketplace/install">
       <patternset refid="shibboleth.versus.server" />
@@ -115,7 +117,9 @@
                 file2="${outdir}/nuxeo-nxr-server-jsf-ui-${nuxeo.distribution.version}.zip"
                 includesfile="${outdir}/includes"
                 excludesfile="${outdir}/excludesfile"
-                patternsetid="shibboleth.versus.jsf">
+                patternsetid="shibboleth.versus.jsf"
+                ignoreContent="false"
+                ignoreContentPattern=".*\.jar$">
     </nx:zipdiff>
     <unzip src="${outdir}/nxr-${maven.project.version}.zip" dest="${outdir}/marketplace/install">
       <patternset refid="shibboleth.versus.jsf" />
