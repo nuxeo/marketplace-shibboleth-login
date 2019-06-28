@@ -13,6 +13,17 @@
   <packaging>zip</packaging>
   <name>Shibboleth Authentication Marketplace Package</name>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.nuxeo.ecm.distribution</groupId>
+        <artifactId>nuxeo-nxr-jsf-ui</artifactId>
+        <type>zip</type>
+        <version>${nuxeo.distribution.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>org.nuxeo.ecm.distribution</groupId>
